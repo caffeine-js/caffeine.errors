@@ -1,4 +1,4 @@
-import { DomainException } from "@/models/errors";
+import { DomainException } from "@/models";
 
 export class OperationFailedException extends DomainException {
 	public readonly name = "Operation Failed";

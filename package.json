@@ -1,6 +1,17 @@
 {
   "name": "@caffeine/errors",
+  "author": {
+    "name": "Alan Reis",
+    "email": "alanreisanjo@gmail.com",
+    "url": "https://hoyasumii.dev"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@types/bun": "latest",
     "@vitest/coverage-v8": "^4.0.18",
@@ -10,5 +21,11 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "scripts": {
+    "build": "tsup src --format cjs,esm --dts --tsconfig tsconfig.build.json --clean",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "bun run build && bun link"
   }
 }

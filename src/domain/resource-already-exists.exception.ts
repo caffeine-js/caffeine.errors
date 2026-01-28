@@ -1,4 +1,4 @@
-import { DomainException } from "@/models/errors";
+import { DomainException } from "@/models";
 
 export class ResourceAlreadyExistsException extends DomainException {
 	public readonly name = "Resource Already Exists";

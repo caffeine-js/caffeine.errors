@@ -1,5 +1,4 @@
-import { CoreException } from "@/models";
-import type { CoreExceptionType } from "@/types";
+import { CoreException, type CoreExceptionType } from "./core";
 
 export class InvalidObjectValueException extends CoreException {
 	protected layer: CoreExceptionType = "internal";

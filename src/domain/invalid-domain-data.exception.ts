@@ -1,4 +1,4 @@
-import { DomainException } from "@/models/errors";
+import { DomainException } from "@/models";
 
 export class InvalidDomainDataException extends DomainException {
 	public readonly name = "Invalid Domain Data";
