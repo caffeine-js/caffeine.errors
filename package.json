@@ -27,10 +27,10 @@
       "require": "./dist/*/index.cjs"
     }
   },
-  "type": "module",
   "files": [
     "dist"
   ],
+  "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
     "@vitest/coverage-v8": "^4.0.18",
@@ -45,6 +45,6 @@
     "build": "tsup 'src/**/index.ts' --format cjs,esm --dts --tsconfig tsconfig.build.json --clean",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "prepare": "bun run build && bun link"
+    "setup": "bun run build && bun link"
   }
 }
