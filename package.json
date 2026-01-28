@@ -8,6 +8,25 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js",
+      "require": "./dist/*/index.cjs"
+    }
+  },
   "type": "module",
   "files": [
     "dist"
@@ -23,7 +42,7 @@
     "typescript": "^5"
   },
   "scripts": {
-    "build": "tsup src --format cjs,esm --dts --tsconfig tsconfig.build.json --clean",
+    "build": "tsup 'src/**/index.ts' --format cjs,esm --dts --tsconfig tsconfig.build.json --clean",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "prepare": "bun run build && bun link"
