@@ -1,6 +1,6 @@
-import { DomainException } from "@/models";
+import { ApplicationException } from "@/models";
 
-export class ResourceNotFoundException extends DomainException {
+export class ResourceNotFoundException extends ApplicationException {
 	public readonly name = "Resource Not Found";
 
 	constructor(

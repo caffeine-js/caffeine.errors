@@ -1,6 +1,6 @@
-import { DomainException } from "@/models";
+import { ApplicationException } from "@/models";
 
-export class ResourceAlreadyExistsException extends DomainException {
+export class ResourceAlreadyExistsException extends ApplicationException {
 	public readonly name = "Resource Already Exists";
 
 	constructor(
