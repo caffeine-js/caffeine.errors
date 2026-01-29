@@ -3,20 +3,14 @@ import { ForeignDependencyConstraintException } from "./foreign-dependency-const
 
 describe("Foreign Dependency Constraint Exception", () => {
 	it("should create an instance with default message", () => {
-		const resource = "User";
-		const dependency = "Posts";
 		const layerName = "PostgreSQL";
-		const exception = new ForeignDependencyConstraintException(
-			resource,
-			dependency,
-			layerName,
-		);
+		const exception = new ForeignDependencyConstraintException(layerName);
 
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception).toBeInstanceOf(ForeignDependencyConstraintException);
 		expect(exception.name).toBe("Foreign Dependency Constraint Exception");
 		expect(exception.message).toBe(
-			`Cannot delete ${resource} because it is associated with existing ${dependency} records.`,
+			`It was not possible to remove the ${layerName} resource due to its usefulness in other domains.`,
 		);
 		expect(exception.layerName).toBe(layerName);
 	});
@@ -24,8 +18,6 @@ describe("Foreign Dependency Constraint Exception", () => {
 	it("should create an instance with custom message", () => {
 		const customMessage = "Custom error message";
 		const exception = new ForeignDependencyConstraintException(
-			"User",
-			"Posts",
 			"PostgreSQL",
 			customMessage,
 		);
