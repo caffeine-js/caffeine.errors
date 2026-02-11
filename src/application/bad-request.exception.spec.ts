@@ -7,7 +7,7 @@ describe("Bad Request Exception", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Bad Request");
 		expect(exception.message).toBe("Bad request for the User application.");
-		expect(exception.layerName).toBe("User");
+		expect(exception.source).toBe("User");
 	});
 
 	it("should create an instance with custom message", () => {

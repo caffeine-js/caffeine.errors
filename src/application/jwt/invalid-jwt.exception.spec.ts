@@ -9,7 +9,7 @@ describe("InvalidJWT Exception", () => {
 		expect(exception.message).toBe(
 			"Invalid JWT for the Application application.",
 		);
-		expect(exception.layerName).toBe("Application");
+		expect(exception.source).toBe("Application");
 	});
 
 	it("should create an instance with custom message", () => {

@@ -9,7 +9,7 @@ describe("UnableToSignPayload Exception", () => {
 		expect(exception.message).toBe(
 			"Unable to sign payload for the Application application.",
 		);
-		expect(exception.layerName).toBe("Application");
+		expect(exception.source).toBe("Application");
 	});
 
 	it("should create an instance with custom message", () => {

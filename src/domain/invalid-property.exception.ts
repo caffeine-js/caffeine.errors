@@ -5,8 +5,8 @@ export class InvalidPropertyException extends DomainException {
 
 	constructor(
 		public readonly property: string,
-		public readonly layerName: string,
-		public readonly message: string = `The property '${property}' in ${layerName} is invalid.`,
+		public readonly source: string,
+		public readonly message: string = `The property '${property}' in ${source} is invalid.`,
 	) {
 		super(message);
 	}

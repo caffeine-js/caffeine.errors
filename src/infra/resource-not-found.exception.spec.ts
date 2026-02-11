@@ -7,7 +7,7 @@ describe("Resource Not Found Exception (Infra)", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Resource Not Found Exception");
 		expect(exception.message).toBe("The resource was not found.");
-		expect(exception.layerName).toBe("PostgreSQL");
+		expect(exception.source).toBe("PostgreSQL");
 	});
 
 	it("should create an instance with custom message", () => {

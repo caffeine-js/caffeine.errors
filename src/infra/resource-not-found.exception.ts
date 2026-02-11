@@ -4,7 +4,7 @@ export class ResourceNotFoundException extends InfraException {
 	public name: string = "Resource Not Found Exception";
 
 	constructor(
-		public layerName: string,
+		public source: string,
 		public message: string = "The resource was not found.",
 	) {
 		super(message);

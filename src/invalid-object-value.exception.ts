@@ -3,7 +3,7 @@ import { CoreException, type CoreExceptionType } from "./core";
 export class InvalidObjectValueException extends CoreException {
 	protected layer: CoreExceptionType = "internal";
 	public readonly name = "Invalid Object Value";
-	public override layerName: string = "$internal";
+	public override source: string = "$internal";
 
 	constructor(
 		public objectValueName: string,

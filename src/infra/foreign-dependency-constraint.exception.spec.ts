@@ -12,7 +12,7 @@ describe("Foreign Dependency Constraint Exception", () => {
 		expect(exception.message).toBe(
 			`It was not possible to remove the ${layerName} resource due to its usefulness in other domains.`,
 		);
-		expect(exception.layerName).toBe(layerName);
+		expect(exception.source).toBe(layerName);
 	});
 
 	it("should create an instance with custom message", () => {
@@ -23,6 +23,6 @@ describe("Foreign Dependency Constraint Exception", () => {
 		);
 
 		expect(exception.message).toBe(customMessage);
-		expect(exception.layerName).toBe("PostgreSQL");
+		expect(exception.source).toBe("PostgreSQL");
 	});
 });

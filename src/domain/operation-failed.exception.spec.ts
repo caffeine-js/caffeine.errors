@@ -9,7 +9,7 @@ describe("OperationFailedException", () => {
 			"Operation failed in the TestDomain domain.",
 		);
 		expect(exception.name).toBe("Operation Failed");
-		expect(exception.layerName).toBe("TestDomain");
+		expect(exception.source).toBe("TestDomain");
 	});
 
 	it("should create an instance with custom message", () => {

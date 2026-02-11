@@ -7,7 +7,7 @@ describe("Operation Not Allowed Exception", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Operation Not Allowed Exception");
 		expect(exception.message).toBe("The operation is not allowed.");
-		expect(exception.layerName).toBe("Redis");
+		expect(exception.source).toBe("Redis");
 	});
 
 	it("should create an instance with custom message", () => {

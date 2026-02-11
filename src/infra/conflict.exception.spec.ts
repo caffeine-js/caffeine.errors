@@ -7,7 +7,7 @@ describe("Conflict Exception", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Conflict Exception");
 		expect(exception.message).toBe("A conflict occurred in the database.");
-		expect(exception.layerName).toBe("PostgreSQL");
+		expect(exception.source).toBe("PostgreSQL");
 	});
 
 	it("should create an instance with custom message", () => {

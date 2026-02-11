@@ -13,7 +13,7 @@ describe("Unexpected Cache Value Exception", () => {
 			`The value from cache for key '${key}' was unexpected.`,
 		);
 		expect(exception.key).toBe(key);
-		expect(exception.layerName).toBe(layerName);
+		expect(exception.source).toBe(layerName);
 	});
 
 	it("should create an instance with custom message", () => {
@@ -28,6 +28,6 @@ describe("Unexpected Cache Value Exception", () => {
 
 		expect(exception.message).toBe(customMessage);
 		expect(exception.key).toBe(key);
-		expect(exception.layerName).toBe(layerName);
+		expect(exception.source).toBe(layerName);
 	});
 });

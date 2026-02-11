@@ -9,7 +9,7 @@ describe("Unauthorized Exception", () => {
 		expect(exception.message).toBe(
 			"Unauthorized access to the User application.",
 		);
-		expect(exception.layerName).toBe("User");
+		expect(exception.source).toBe("User");
 	});
 
 	it("should create an instance with custom message", () => {

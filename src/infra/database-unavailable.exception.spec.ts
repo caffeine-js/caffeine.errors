@@ -7,7 +7,7 @@ describe("Database Unavailable Exception", () => {
 		expect(exception).toBeInstanceOf(Error);
 		expect(exception.name).toBe("Database Unavailable Exception");
 		expect(exception.message).toBe("The database is currently unavailable.");
-		expect(exception.layerName).toBe("MySQL");
+		expect(exception.source).toBe("MySQL");
 	});
 
 	it("should create an instance with custom message", () => {
